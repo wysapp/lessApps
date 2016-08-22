@@ -12,8 +12,8 @@ import { SpeakerListPage } from '../speaker-list/speaker-list';
 })
 export class TabsPage {
   tab1Root: any = SchedulePage;
-  // tab2Root: any = SpeakerListPage;
-  // tab3Root: any = MapPage;
+  tab2Root: any = SpeakerListPage;
+  tab3Root: any = MapPage;
   tab4Root: any = AboutPage;
 
   mySelectedIndex: number;
