@@ -15,7 +15,7 @@ class DemoApp {
   rootPage: any;
   nextPage: any;
   currentPlatform: string = 'ios';
-  currentPageIndex: number = 1;
+  currentPageIndex: number = 20;
 
   @ViewChild('content') content: NavController;
   @ViewChild(Menu) menu: Menu;
