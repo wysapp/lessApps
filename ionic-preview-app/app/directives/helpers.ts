@@ -12,8 +12,21 @@ export function hasScrollbar() {
 }
 
 
-export function getPageFor(hash) {
+export function getPages() {
+  return {
+    'overview': actionSheets.BasicPage,
+    'action-sheets': actionSheets.BasicPage,
+    'alert': alerts.BasicPage,
+    'alert-confirm': alerts.ConfirmPage ,
+    'alert-prompt': alerts.PromptPage,
+    'alert-radio': alerts.RadioPage,
+    'alert-checkbox': alerts.CheckboxPage
+  };
+}
 
+
+export function getPageFor(hash) {
+  return getPages()[hash];
 }
 
 

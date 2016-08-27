@@ -26,7 +26,7 @@ class DemoApp {
     private zone: NgZone
   ) {
     this.rootPage = ActionPage;
-    
+    console.log(helpers.getPages());
   }
 
   ngAfterContentInit() {
@@ -79,11 +79,17 @@ class DemoApp {
 
 
   previousSection() {
-
+    let pageName = Object.keys(helpers.getPages())[this.currentPageIndex - 1];
+    console.log('ffffffffffff', pageName);
+    this.content.setRoot(helpers.getPageFor(pageName), {}, {animate: false});
+    this.currentPageIndex = this.currentPageIndex -1;
   }
 
   nextSection() {
-
+    let pageName = Object.keys(helpers.getPages())[this.currentPageIndex + 1];
+    console.log('nextPage:', pageName);
+    this.content.setRoot(helpers.getPageFor(pageName), {}, { animate: false });
+    this.currentPageIndex = this.currentPageIndex + 1;
   }
 
   openPage(page) {
