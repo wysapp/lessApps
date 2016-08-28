@@ -8,6 +8,11 @@ import * as alerts from '../pages/alerts/alerts';
 import * as badges from '../pages/badges/badges';
 import * as buttons from '../pages/buttons/buttons';
 import * as cards from '../pages/cards/cards';
+import * as checkboxes from '../pages/checkboxes/checkboxes';
+import * as datetime from '../pages/datetime/datetime';
+import * as gestures from '../pages/gestures/gestures';
+import * as popovers from '../pages/popovers/popovers/';
+import * as radios from '../pages/radios/radios';
 
 export function hasScrollbar() {
 
@@ -42,7 +47,16 @@ export function getPages() {
     'card-list': cards.ListPage,
     'card-image': cards.ImagePage,
     'card-background': cards.BackgroundPage,
+    'advanced-cards': cards.AdvancedSocialPage,
+    'card-advanced-map': cards.AdvancedMapPage,
+    'card-advanced-weather': cards.AdvancedWeatherPage,
     
+    'checkbox': checkboxes.BasicPage,
+    'datetime': datetime.BasicPage,
+    'gestures': gestures.BasicPage,
+    'popovers': popovers.BasicPage,
+    'radio': radios.BasicPage,
+
   };
 }
 
